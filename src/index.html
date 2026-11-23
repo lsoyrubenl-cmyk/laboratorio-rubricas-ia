@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tutorial guiado para crear rúbricas con IA y evaluar entregas con un agente.">
+  <title>Taller guiado · Rúbricas con IA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mockups.css">
+  <link rel="stylesheet" href="explainer.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="#inicio"><span class="brand-symbol">R<span>✳</span></span><span><b>Rúbricas con IA</b><small>TALLER GUIADO</small></span></a>
+      <div class="rail-caption">TU RECORRIDO</div>
+      <nav class="module-nav" aria-label="Módulos del tutorial">
+        <button class="module-link current" data-module="1"><span class="module-index">01</span><span><b>Crear la rúbrica</b><small>Elige entorno y diseña</small></span><i>›</i></button>
+        <button class="module-link" data-module="2"><span class="module-index">02</span><span><b>Cargar en un agente</b><small>Configura las instrucciones</small></span><i>›</i></button>
+        <button class="module-link" data-module="3"><span class="module-index">03</span><span><b>Evaluar una entrega</b><small>Prueba el flujo docente</small></span><i>›</i></button>
+      </nav>
+      <div class="rail-bottom"><div class="coach"><span>✦</span><b>Aprende haciendo</b><p>Avanza paso a paso. Cada módulo tiene una práctica breve.</p></div><div class="rail-progress"><div><span>PROGRESO TOTAL</span><b id="progress-label">0%</b></div><div class="progress-track"><i id="overall-progress"></i></div><small id="progress-detail">0 de 3 módulos completados</small></div></div>
+    </aside>
+    <main class="workspace">
+      <header class="topbar"><div class="crumb"><span>Taller docente</span><b>/</b><strong id="module-crumb">Módulo 1 · Crear la rúbrica</strong></div><div class="top-right"><button class="explain-trigger" id="explain-open" aria-controls="explainer-layer" aria-expanded="false">💡 ¿Qué estoy viendo aquí?</button><span class="save-indicator"><i></i><span id="save-label">Progreso guardado</span></span><span class="scorm-pill">SCORM 1.2</span></div></header>
+      <div class="lesson-progress"><div class="lesson-progress-copy"><span id="module-label">MÓDULO 1 DE 3</span><b id="step-label">Paso 1 de 5</b></div><div class="step-track" id="step-track" aria-label="Progreso del módulo"></div></div>
+      <section class="lesson" id="lesson" aria-live="polite"></section>
+      <footer class="bottom-nav"><button class="back-button" id="back-button">← <span>Paso anterior</span></button><div class="bottom-hint" id="bottom-hint">Explora los controles de la simulación.</div><button class="next-button" id="next-button">Siguiente paso <span>→</span></button></footer>
+    </main>
+  </div>
+  <div class="explainer-layer" id="explainer-layer" hidden>
+    <button class="explainer-backdrop" id="explainer-backdrop" aria-label="Cerrar explicador"></button>
+    <aside class="explainer-panel" id="explainer-panel" role="dialog" aria-modal="true" aria-labelledby="explainer-title">
+      <div class="explainer-head"><div><span class="explainer-kicker">GUÍA DE LA INTERFAZ</span><h2 id="explainer-title">¿Qué estoy viendo aquí?</h2></div><button class="explainer-close" id="explainer-close" aria-label="Cerrar">×</button></div>
+      <p class="explainer-intro" id="explainer-intro"></p>
+      <div class="explainer-layout"><nav class="explainer-points" id="explainer-points" aria-label="Temas de explicación"></nav><section class="explainer-detail" aria-live="polite"><div class="explain-number" id="explain-number">01</div><h3 id="explain-heading"></h3><p id="explain-body"></p><div class="explain-hotspot"><span>✳ EN LA SIMULACIÓN</span><p id="explain-hotspot"></p><button id="explain-highlight">Resaltar este elemento</button></div></section></div>
+      <footer class="explainer-footer"><button class="explain-prev" id="explain-prev">← Anterior</button><span id="explain-counter">1 de 4</span><button class="explain-next" id="explain-next">Siguiente →</button></footer>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
